@@ -11,6 +11,18 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   classes/roanalog
+   classes/roblackbox
+   classes/rodashboard
+   classes/rodigitalio
+   classes/roencoder
+   classes/rojoystick
+   classes/roparameter
+   classes/ropwm
+   classes/rosolenoid
+   classes/rostatus
+   classes/rotimer
+
 
 
 Indices and tables
