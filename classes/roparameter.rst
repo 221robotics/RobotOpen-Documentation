@@ -5,10 +5,10 @@ ROParameter allows for on-the-fly configuration of your RobotOpen controller fro
 
 
 
-	// variable type followed by a UNIQUE address (0 through 1000)
-	ROParameter pConstant(float, 0);
-	ROParameter iConstant(float, 1);
-	ROParameter dConstant(float, 2);
+	// DS label, variable type, UNIQUE address (0 through 255)
+	ROParameter pConstant('pconstant', float, 0);
+	ROParameter iConstant('iconstant', float, 1);
+	ROParameter dConstant('dconstant', float, 2);
 
 
 	void loop() {
