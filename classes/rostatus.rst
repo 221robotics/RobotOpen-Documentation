@@ -7,4 +7,4 @@ ROStatus provides current robot status such as enabled state, power level, and d
 
 	ROStatus.batteryVoltage();
 	ROStatus.isEnabled();
-	ROStatus.uptimeMinutes();
+	ROStatus.uptimeSeconds();

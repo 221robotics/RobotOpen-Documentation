@@ -9,4 +9,3 @@ ROPWM allows for control of the PWM outputs on the RobotOpen board. Pulse width 
 
 
 	leftDrive.write(127);
-	leftDrive.disable();

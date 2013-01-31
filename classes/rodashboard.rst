@@ -7,4 +7,4 @@ RODashboard allows for arbitrary data transmission to the dashboard to de displa
 
 	RODashboard.publish("name", variable);
 
-	RODashboard.console("this is a debug statement");
+	RODashboard.debug("this is a debug statement");
