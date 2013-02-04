@@ -12,8 +12,8 @@ ROTimer allows for simple time-based loop execution and delays. By utilizing ROT
 
 
 	void setup() {
-		step1.poke();
-		repeatingLoop.poke();
+		step1.queue(0);
+		repeatingLoop.queue(0);
 	}
 
 
@@ -28,7 +28,7 @@ ROTimer allows for simple time-based loop execution and delays. By utilizing ROT
 		}
 		if (step3.ready()) {
 			// last step of the process, now repeat
-			step1.poke();
+			step1.queue(0);
 		}
 
 		if (repeatingLoop.ready()) {
