@@ -6,7 +6,7 @@
 RobotOpen Arduino Library Reference
 =============================================
 
-Contents:
+Arduino Library Classes:
 
 .. toctree::
    :maxdepth: 2
@@ -22,6 +22,11 @@ Contents:
    classes/rosolenoid
    classes/rostatus
    classes/rotimer
+
+RobotOpen Protocol
+
+.. toctree::
+   :maxdepth: 2
 
    protocol/commands
 
