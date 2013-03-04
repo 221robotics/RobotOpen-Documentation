@@ -23,6 +23,8 @@ Contents:
    classes/rostatus
    classes/rotimer
 
+   protocol/commands
+
 
 
 Indices and tables

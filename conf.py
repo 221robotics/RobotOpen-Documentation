@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# RobotOpen Library documentation build configuration file, created by
+# RobotOpen documentation build configuration file, created by
 # sphinx-quickstart on Sun Dec 16 21:38:51 2012.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -40,7 +40,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'RobotOpen Library'
+project = u'RobotOpen'
 copyright = u'2012 by 221 Robotic Systems'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -164,7 +164,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'RobotOpenLibrarydoc'
+htmlhelp_basename = 'RobotOpendoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -183,7 +183,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'RobotOpenLibrary.tex', u'RobotOpen Library Documentation',
+  ('index', 'RobotOpen.tex', u'RobotOpen Documentation',
    u'Eric Barch', 'manual'),
 ]
 
@@ -213,7 +213,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'robotopenlibrary', u'RobotOpen Library Documentation',
+    ('index', 'robotopen', u'RobotOpen Documentation',
      [u'Eric Barch'], 1)
 ]
 
@@ -227,9 +227,9 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'RobotOpenLibrary', u'RobotOpen Library Documentation',
-   u'Eric Barch', 'RobotOpenLibrary', 'One line description of project.',
-   'Miscellaneous'),
+  ('index', 'RobotOpen', u'RobotOpen Documentation',
+   u'Eric Barch', 'RobotOpen', 'RobotOpen Library and Protocol documentation.',
+   'Robotics'),
 ]
 
 # Documents to append as an appendix to all manuals.
