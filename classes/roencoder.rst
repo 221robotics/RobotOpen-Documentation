@@ -8,5 +8,5 @@ ROEncoder provides access to the quadrature encoder inputs on your RobotOpen boa
 	ROEncoder leftDriveEncoder(1);
 
 
-	leftDriveEncoder.read();
+	int32_t leftDriveEncoder.read();
 	leftDriveEncoder.write(0);

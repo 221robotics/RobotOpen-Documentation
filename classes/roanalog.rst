@@ -9,4 +9,4 @@ ROAnalog gives you access to the analog inputs on your RobotOpen board. ::
 
 
 	// get current reading (0-1023) proportional to 0-5V
-	read();
+	int read();

@@ -14,7 +14,7 @@ RODigitalIO provides access to the digital pins on your RobotOpen board. Pins ca
 	redLED.off();
 
 	// input calls
-	blueButton.read();
+	boolean blueButton.read();
 	blueButton.pullUp();
 	blueButton.allowFloat();
 
