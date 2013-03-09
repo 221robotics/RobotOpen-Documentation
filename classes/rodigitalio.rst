@@ -5,8 +5,8 @@ RODigitalIO provides access to the digital pins on your RobotOpen board. Pins ca
 
 
 
-	RODigitalIO redLED(OUTPUT, 3);
-	RODigitalIO blueButton(INPUT, 2);
+	RODigitalIO redLED(3, OUTPUT);
+	RODigitalIO blueButton(2, INPUT);
 
 
 	// output calls
