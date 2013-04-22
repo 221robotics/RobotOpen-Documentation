@@ -54,6 +54,7 @@ Joystick/Control Naming
 | Byte 22 - **Aux 3** (0x00-0xFF)
 | Byte 23 - **Aux 4** (0x00-0xFF)
 
+
 Control (Enable) Packet
 ~~~~~~~~~~~~~~~~~~~~~~
 A control packet must contain at least one controller's worth of data. This means that a control packet can be 27, 51, 75, or 99 bytes long. Control packets with no joystick data will be dropped on the robot side. A CRC-16 of the packet is calculated and appended on the end. When a valid control packet is received on the robot side, the robot will enable itself.
@@ -66,6 +67,7 @@ A control packet must contain at least one controller's worth of data. This mean
 | 2nd to Last Byte - CRC-16 Low Byte
 | Last Byte - CRC-16 High Byte
 
+
 Heartbeat (Disable) Packet
 ~~~~~~~~~~~~~~~~~~~~~~
 Heartbeat packets are used to disable the robot but keep communications active. All heartbeat packets are 3 fixed bytes, show below.
@@ -73,6 +75,7 @@ Heartbeat packets are used to disable the robot but keep communications active. 
 | Byte 0 - 0x68
 | Byte 1 - 0xEE
 | Byte 2 - 0x01
+
 
 Set Parameter Packet
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -88,6 +91,7 @@ The robot must be disabled for the parameters to be successfully set. Multiple p
 | ...
 | 2nd to Last Byte - CRC-16 Low Byte
 | Last Byte - CRC-16 High Byte
+
 
 Get Parameters Packet
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -109,16 +113,10 @@ Debug packets allow for arbitrary ASCII data to be sent to the Driver Station (a
 | Byte 0 - 0x70
 | (ascii bytes of variable length)
 
-Dashboard Types
-~~~~~~~~~~~~~~~~~~~~~~
-| Char - 1 byte (unsigned) - (type code: 0x63)
-| Int - 2 bytes (signed) - (type code: 0x69)
-| Long - 4 bytes (signed) - (type code: 0x6C)
-| Float - 4 bytes (signed) - (type code: 0x66)
 
 Dashboard Packet
 ~~~~~~~~~~~~~~~~~~~~~~
-A dashboard packet contains values that a user has published from their robot code so that they can monitor them remotely on their Driver Station. The supported types can be seen above. Unlike parameters, dashboard values are exactly their specified length in the packet. Every dashboard value in a dashboard packet begins with a length (the length of that dashboard value including the length byte). The type will be one of the type codes listed above. The appropriate number of bytes will follow based on the value's type. The ID is a variable length ascii name for the value.
+A dashboard packet contains values that a user has published from their robot code so that they can monitor them remotely on their Driver Station. The supported types can be seen above. Unlike parameters, dashboard values are exactly their specified length in the packet. Every dashboard value in a dashboard packet begins with a length (the length of that dashboard value including the length byte). The type will be one of the type codes listed below. The appropriate number of bytes will follow based on the value's type. The ID is a variable length ascii name for the value.
 
 | Byte 0 - 0x64
 | ...
@@ -132,17 +130,17 @@ A dashboard packet contains values that a user has published from their robot co
 | ...
 
 
-Parameter Type Codes
+Dashboard Types
 ~~~~~~~~~~~~~~~~~~~~~~
-| Bool - 0x62
-| Char - 0x63
-| Int - 0x69
-| Long - 0x6C
-| Float - 0x66
+| Char - 1 byte (unsigned) - (type code: 0x63)
+| Int - 2 bytes (signed) - (type code: 0x69)
+| Long - 4 bytes (signed) - (type code: 0x6C)
+| Float - 4 bytes (signed) - (type code: 0x66)
+
 
 Parameters Packet
 ~~~~~~~~~~~~~~~~~~~~~~
-A parameters packet is sent back upon the reception of a get parameters packet. Each parameter in the parameters packet begins with a length (the length of the parameter including the length byte). This is followed by the unique parameter address (0-99). The type follows that (reference the parameter type codes above). 4 bytes will follow, however based on the type the non-used bytes will be zeroes. The ID is a variable length ascii name for the parameter.
+A parameters packet is sent back upon the reception of a get parameters packet. Each parameter in the parameters packet begins with a length (the length of the parameter including the length byte). This is followed by the unique parameter address (0-99). The type follows that (reference the parameter type codes below). 4 bytes will follow, however based on the type the non-used bytes will be zeroes. The ID is a variable length ascii name for the parameter.
 
 | Byte 0 - 0x72
 | ...
@@ -155,3 +153,12 @@ A parameters packet is sent back upon the reception of a get parameters packet. 
 | Val4
 | ID (variable length)
 | ...
+
+
+Parameter Type Codes
+~~~~~~~~~~~~~~~~~~~~~~
+| Bool - 0x62
+| Char - 0x63
+| Int - 0x69
+| Long - 0x6C
+| Float - 0x66
