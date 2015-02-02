@@ -11,6 +11,7 @@ Arduino Library Classes:
 .. toctree::
    :maxdepth: 2
 
+   classes/robotopen
    classes/roanalog
    classes/roblackbox
    classes/rodashboard
