@@ -15,7 +15,7 @@ Functions
 
    By the default the robot will consider itself disabled when a packet has not been received in a period greater than 200 milliseconds. This can be overridden using this function by defining the number of milliseconds until the robot is disabled.
 
-.. cpp:function:: void RobotOpen.begin(LoopCallback *enabledCallback, LoopCallback *disabledCallback, LoopCallback *timedtasksCallback)
+.. cpp:function:: void RobotOpen.begin(*enabledCallback, *disabledCallback, *timedtasksCallback)
 
    This function should be called once in the setup function of the robot code with a reference to an enable function, disable function, and timed tasks function. The enabled function is only called when the robot is enabled. The disabled function is only called when the robot is disabled. Timed tasks will execute continuously while the robot is powered on.
 
