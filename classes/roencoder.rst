@@ -30,11 +30,11 @@ Functions
 
    NOTE: Gorgon boards only. Returns the current number of counts per second.
 
-.. cpp:function:: setSensitivity(uint16_t sensitivity)
+.. cpp:function:: void setSensitivity(uint16_t sensitivity)
 
    NOTE: Gorgon boards only. Used to adjust how often the coprocessor recalculates encoder counts and CPS. By default this is set to 4 samples. If you have an encoder that generates a very large number of counts per rotation (greater than a couple hundred), you may want to experiment with raising this number.
 
-.. cpp:function:: setCPSSamplesToAverage(uint8_t samples)
+.. cpp:function:: void setCPSSamplesToAverage(uint8_t samples)
 
    NOTE: Gorgon boards only. Sets the number of samples used in the averaging of the CPS value. Larger numbers will react less quickly, while lower numbers will be jumpier. The default is set to 9.
 
