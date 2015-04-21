@@ -18,7 +18,7 @@ Functions
 
    Applies power to the specified solenoid.
 
-.. cpp:function:: void detach()
+.. cpp:function:: void off()
 
    Disables power to the specified solenoid.
 
